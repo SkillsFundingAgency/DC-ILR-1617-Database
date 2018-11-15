@@ -1,0 +1,25 @@
+﻿CREATE TABLE [Rulebase].[AEC_ApprenticeshipPriceEpisode_Period] (
+    [UKPRN]                                                  INT             NOT NULL,
+    [LearnRefNumber]                                         VARCHAR (12)    NOT NULL,
+    [PriceEpisodeIdentifier]                                 VARCHAR (25)    NOT NULL,
+    [Period]                                                 INT             NOT NULL,
+    [PriceEpisodeApplic1618FrameworkUpliftBalancing]         DECIMAL (10, 5) NULL,
+    [PriceEpisodeApplic1618FrameworkUpliftCompletionPayment] DECIMAL (10, 5) NULL,
+    [PriceEpisodeApplic1618FrameworkUpliftOnProgPayment]     DECIMAL (10, 5) NULL,
+    [PriceEpisodeBalancePayment]                             DECIMAL (10, 5) NULL,
+    [PriceEpisodeBalanceValue]                               DECIMAL (10, 5) NULL,
+    [PriceEpisodeCompletionPayment]                          DECIMAL (10, 5) NULL,
+    [PriceEpisodeFirstDisadvantagePayment]                   DECIMAL (10, 5) NULL,
+    [PriceEpisodeFirstEmp1618Pay]                            DECIMAL (10, 5) NULL,
+    [PriceEpisodeFirstProv1618Pay]                           DECIMAL (10, 5) NULL,
+    [PriceEpisodeInstalmentsThisPeriod]                      INT             NULL,
+    [PriceEpisodeLevyNonPayInd]                              INT             NULL,
+    [PriceEpisodeLSFCash]                                    DECIMAL (10, 5) NULL,
+    [PriceEpisodeOnProgPayment]                              DECIMAL (10, 5) NULL,
+    [PriceEpisodeSecondDisadvantagePayment]                  DECIMAL (10, 5) NULL,
+    [PriceEpisodeSecondEmp1618Pay]                           DECIMAL (10, 5) NULL,
+    [PriceEpisodeSecondProv1618Pay]                          DECIMAL (10, 5) NULL,
+    [PriceEpisodeSFAContribPct]                              DECIMAL (10, 5) NULL,
+    PRIMARY KEY CLUSTERED ([UKPRN] ASC, [LearnRefNumber] ASC, [PriceEpisodeIdentifier] ASC, [Period] ASC)
+);
+
