@@ -42,14 +42,29 @@ GO
 RAISERROR('		   Update User Account Passwords',10,1) WITH NOWAIT;
 GO
 RAISERROR('			     RO User',10,1) WITH NOWAIT;
-ALTER USER [ILR1819DataStore_RO_User] WITH PASSWORD = N'$(ROUserPassword)';
+ALTER USER [ILR1617DataStore_RO_User] WITH PASSWORD = N'$(ROUserPassword)';
 GO
 RAISERROR('			     RW User',10,1) WITH NOWAIT;
-ALTER USER [ILR1819DataStore_RW_User] WITH PASSWORD = N'$(RWUserPassword)';
+ALTER USER [ILR1617DataStore_RW_User] WITH PASSWORD = N'$(RWUserPassword)';
 GO
 RAISERROR('			     DSCI User',10,1) WITH NOWAIT;
 ALTER USER [User_DSCI] WITH PASSWORD = N'$(DSCIUserPassword)';
 GO
+
+
+-- Remove Incorrect users.
+IF EXISTS ( SELECT [name] FROM sys.database_principals WHERE [name] = 'ILR1819DataStore_RW_User')
+BEGIN
+	RAISERROR('Drop User : %s',10,1,'ILR1819DataStore_RW_User') WITH NOWAIT;
+    DROP USER [ILR1819DataStore_RW_User]
+END
+GO
+IF EXISTS ( SELECT [name] FROM sys.database_principals WHERE [name] = 'ILR1819DataStore_RO_User')
+BEGIN
+	RAISERROR('Drop User : %s',10,1,'ILR1819DataStore_RO_User') WITH NOWAIT;
+    DROP USER [ILR1819DataStore_RO_User]
+END
+
 RAISERROR('Completed',10,1) WITH NOWAIT;
 GO
 
