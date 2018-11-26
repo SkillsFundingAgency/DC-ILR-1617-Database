@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [Valid].[SourceFile] (
+	[ID]				  INT IDENTITY (1,1) NOT NULL,
     [UKPRN]               INT          NOT NULL,
     [SourceFileName]      VARCHAR (50) NOT NULL,
     [FilePreparationDate] DATE         NULL,
@@ -6,7 +7,8 @@
     [SoftwarePackage]     VARCHAR (30) NULL,
     [Release]             VARCHAR (20) NULL,
     [SerialNo]            VARCHAR (2)  NULL,
-    [DateTime]            DATETIME     NULL
+    [DateTime]            DATETIME     NULL,
+	CONSTRAINT [PK_SourceFile] PRIMARY KEY ([ID])
 );
 
 

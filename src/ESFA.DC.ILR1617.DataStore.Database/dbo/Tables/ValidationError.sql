@@ -10,6 +10,7 @@
     [LearnRefNumber] VARCHAR (100)   NULL,
     [RuleName]       VARCHAR (50)    NULL,
     [Severity]       VARCHAR (2)     NULL,
-    [FileLevelError] INT             NULL
+    [FileLevelError] INT             NULL,
+	CONSTRAINT [PK_ValidationError] PRIMARY KEY ([ID])
 );
 

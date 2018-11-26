@@ -9,7 +9,9 @@
     [TotalErrorCount]               INT           NULL,
     [TotalWarningCount]             INT           NULL,
     [SubmittedTime]                 DATETIME      NULL,
-    [Success]                       BIT           NULL,
+    [Success]                       BIT           NULL, 
+    CONSTRAINT [PK_FileDetails] PRIMARY KEY ([ID]),
+
     CONSTRAINT [PK_dbo.FileDetails] UNIQUE NONCLUSTERED ([UKPRN] ASC, [Filename] ASC, [Success] ASC)
 );
 
