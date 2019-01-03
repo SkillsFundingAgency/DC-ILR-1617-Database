@@ -5,7 +5,7 @@
     [LearnRefNumber]         VARCHAR (100) NOT NULL,
     [AimSeqNumber]           BIGINT        NOT NULL,
     [CommitmentId]           BIGINT        NOT NULL,
-    [VersionId]              BIGINT        NOT NULL,
+    [VersionId]              VARCHAR (25)  NOT NULL,
     [Period]                 INT           NOT NULL,
     [Payable]                BIT           NOT NULL,
     [TransactionType]        INT           NOT NULL,

@@ -4,6 +4,6 @@
     [ErrorString]    VARCHAR (2000) NULL,
     [FieldValues]    VARCHAR (2000) NULL,
     [LearnRefNumber] VARCHAR (100)  NOT NULL,
-    [RuleId]         VARCHAR (50)   NULL, 
-    CONSTRAINT [PK_VALFD_ValidationError] PRIMARY KEY ([UKPRN], [AimSeqNumber], [LearnRefNumber])
+    [RuleId]         VARCHAR (50)   NOT NULL, 
+    CONSTRAINT [PK_VALFD_ValidationError] PRIMARY KEY ([UKPRN], [AimSeqNumber], [LearnRefNumber],[RuleId])
 );
